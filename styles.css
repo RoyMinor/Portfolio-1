@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #ff7c7c, #f4a261);
+    color: #fff;
+    line-height: 1.6;
+    padding-top: 80px;
+  }
+  
+  nav {
+    width: 100%;
+    background-color: #2d2d2d;
+    padding: 20px 0;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  nav a:hover {
+    color: red;
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+  }
+  
+  hr {
+    border: 1px solid #fff;
+    margin: 25px 0;
+  }
+  
+  h1, h2, h3, h4 {
+    font-family: Courier New, monospace;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  h3 {
+    font-size: 1.7rem;
+    color: #ffeb3b;
+  }
+  
+  .project-tile {
+    background-color: #333;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-tile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .project-tile h4 {
+    font-size: 1.8rem;
+    color: #ff7c7c;
+  }
+  
+  .project-tile p {
+    font-size: 1.2rem;
+    color: #dcdcdc;
+  }
+  
+  .project-link {
+    color: #ffeb3b;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .project-link:hover {
+    color: #ff7c7c;
+  }
+  
+  footer {
+    background-color: #2d2d2d;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 40px;
+    color: #fff;
+  }
+  
+  footer h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  footer a {
+    color: #ffeb3b;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin-top: 10px;
+  }
+  
+  footer a:hover {
+    color: #ff7c7c;
+  }
+  
+  footer p {
+    margin-top: 15px;
+    font-size: 0.9rem;
+  }
+  
+  footer a:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+  /* Animation for Welcome Section */
+  #welcome-section {
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Animation for the About-Me Section */
+  #about-me h2 {
+    font-size: 2.5rem;
+    animation: bounceIn 1s ease-in-out;
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      transform: translteY(-100%);
+    }
+    50% {
+      transform: translateY(30px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  #projects {
+    margin-top: 50px;
+    animation: slideUp 1.5s ease-in-out;
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .project-tile img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  #profile-link {
+    font-size: 1.2rem;
+    color: #ff7c7c;
+    transition: color 0.3s ease;
+  }
+  
+  #profile-link:hover {
+    color: #ffeb3b;
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  @media only screen and (max-width: 768px) {
+    body {
+      padding: 10px;
+    }
+    nav a {
+      font-size: 16px;
+      margin: 0 10px;
+    }
+    h1 {
+      font-size: 2.5rem;
+    }
+    .project-tile {
+      padding: 15px;
+    }
+    .project-tile h4 {
+      font-size: 1.6rem;
+    }
+    .project-tile p {
+      font-size: 1rem;
+    }
+    footer h4 {
+      font-size: 1.3rem;
+    }
+    footer a {
+      font-size: 1rem;
+    }
+  }
+  
+
+  
+  
