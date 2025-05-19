@@ -190,31 +190,82 @@
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
   }
 
+  #projects {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  #projects h3 {
+    font-size: 2.5rem;
+    color: #ffeb3b;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #projects h3::before,
+  #projects h3::after {
+    content: "✧";
+    color: #ff7c7c;
+    margin: 0 15px;
+    animation: pulse 2s infinite alternate;
+  }
+
   .project-tile {
-    background-color: #333;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 20px 0;
+    background-color: black;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 3rem;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-left: 5px solid #ff7c7c;
     position: relative;
     overflow: hidden;
+    backdrop-filter: blur(10px);
   }
   
   .project-tile:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 15px 35px rgba(255, 124, 124, 0.4);
   }
   
   .project-tile h4 {
     font-size: 1.8rem;
     color: #ff7c7c;
+    margin-bottom: 1rem;
+    border-bottom: 2px dashed rgba(255, 235, 59, 0.3);
+    padding-bottom: 0.5rem;
   }
   
   .project-tile p {
-    font-size: 1.2rem;
     color: #dcdcdc;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .project-title a {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff7c7c, #f4a261);
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 124, 124, 0.4);
+  }
+
+  .project-tile a:hover {
+    color: #ffeb3b;
+    transform: translateY(-3);
+    box-shadow: 0 8px 25px rgba(255, 124, 124, 0.6); 
   }
   
   .project-link {
@@ -227,6 +278,12 @@
   
   .project-link:hover {
     color: #ff7c7c;
+  }
+
+  .github-prompt {
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 1.2rem;
   }
 
   .coffee-icon {
@@ -389,10 +446,10 @@
       font-size: 2.5rem;
     }
     .project-tile {
-      padding: 15px;
+      padding: 1.5rem;
     }
-    .project-tile h4 {
-      font-size: 1.6rem;
+    .project-tile h3 {
+      font-size: 2rem;
     }
     .project-tile p {
       font-size: 1rem;
