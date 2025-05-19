@@ -83,7 +83,7 @@
 
   #welcome-section p:first-of-type {
     font-size: 1.8rem;
-    color: #ffeb3b;
+    color: black;
     font-weight: 500;
     margin-bottom: 1rem;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
@@ -111,14 +111,65 @@
     max-width: 650px;
     margin: 0 auto;
   }
+
+  #about-me {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgb(0, 0, 0, 0.2);
+  }
+
+  #about-me h2 {
+    font-size: 2.5rem;
+    color: #ffeb3b;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #about-me h2::after {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #ff7c7c, transparent);
+    margin: 10px auto 0;
+  }
+
+  #about-me p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  #about-me p::before {
+    /* content: "\00025B9"; */
+    position: absolute;
+    left: 0;
+    color: #ff7c7c;
+  }
+
+  #about-me p:last-of-type {
+    font-weight: 500;
+    font-style: italic;
+  }
   
   .toolkit {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
     justify-content: center;
-    margin-top: 1.5rem;
-    max-width: 600px;
+    margin-top: 2.5rem;
+  
   }
 
   .toolkit span {
@@ -136,6 +187,7 @@
   .toolkit span:hover {
     background: #ff7c7c;
     transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
   }
 
   .project-tile {
@@ -254,18 +306,15 @@
   /* Animation for the About-Me Section */
   #about-me h2 {
     font-size: 2.5rem;
-    animation: bounceIn 1s ease-in-out;
+    animation: loadingPulse 2s infinite alternate;
   }
   
-  @keyframes bounceIn {
+  @keyframes loadingPulse {
     0% {
-      transform: translteY(-100%);
-    }
-    50% {
-      transform: translateY(30px);
+        opacity: 0.8;
     }
     100% {
-      transform: translateY(0);
+        opacity: 1; text-shadow: 0 0 10px rgba(255, 235, 59, 0.5);
     }
   }
   
