@@ -11,7 +11,7 @@
   <body>
     <header>
       <nav id="navbar">
-        <a href="#welcome-section" class="nav-link">Welcome</a>
+        <a href="#welcome-section" class="nav-link active">Welcome</a>
         <a href="#about-me" class="nav-link">About Me</a>
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#contact" class="nav-link">Contact</a> 
@@ -24,7 +24,7 @@
         <img src="assets/IMG_0119.jpg" class="rounded-circle" alt="Roy face pic" />
         <!-- <h2>" Welcome To My Page, So Glad You Could Make It! "</h2> -->
         <p>Hi, I'm Roy &#128075;</p>
-        <p>A creative, fun loving, and calm developer who believes great code should be as enjoyable to build as it is to use.</p>
+        <p>An innovative, fun loving, and calm developer who believes great code should be as enjoyable to build as it is to use.</p>
       </section>
       <hr>
       <section id="about-me">
@@ -62,7 +62,7 @@
       </section>
       <hr>
       <section id="projects">
-        <h3>&#128747; My infinite loops of CREATIVITY &#128684; </h3>
+        <h3>My infinite loops of CREATIVITY</h3>
         <div class="project-tile">
           <h4>My First Project</h4>
         <p>A retro style browser RPG built with vanilla JavaScript and this was my first solo dev adventure!</p>
@@ -135,5 +135,23 @@
         <a href="#contact" class="nav-link">Contact</a> 
 
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const welcomeLink = document.querySelector("a[href='#welcome-section']");
+        welcomeLink.classList.add("active");
+
+        // handle CLICK events 
+        document.querySelectorAll("nav a").forEach(link => {
+          link.addEventListener("click", function() {
+           
+        // Remove active class from all Links
+        document.querySelectorAll("nav a").forEach(el => el.classList.remove("active"));
+
+        // add to CLICKED LINK
+           this.classList.add("active");
+          });
+        });
+      });
+    </script>
   </body>
 </html>
