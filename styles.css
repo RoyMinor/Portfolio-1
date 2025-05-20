@@ -190,6 +190,24 @@
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
   }
 
+  .feature-list {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .feature-list li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    list-style-type: none;
+  }
+
+  .feature-list li::before {
+    content: "▹";
+    position: absolute;
+    left: -1.5rem;
+    color: #ff7c7c;
+  }
+  
   #projects {
     max-width: 1200px;
     margin: 0 auto;
@@ -311,7 +329,7 @@
     position: relative;
   }
   footer::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
